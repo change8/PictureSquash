@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片去水印 - 在线工具集合</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/watermark.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="back-link">返回首页</a>
+            <h1>图片去水印</h1>
+            <p>智能去除图片上的水印，还原清晰图片</p>
+        </header>
+
+        <main>
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <div class="upload-box">
+                    <img src="../assets/icons/upload-icon.svg" alt="上传图标" class="upload-icon">
+                    <p>点击或拖拽图片到此处</p>
+                    <p class="support-text">支持 PNG、JPG 格式</p>
+                </div>
+            </div>
+
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <div class="preview-box">
+                    <div class="original-image">
+                        <h3>原始图片</h3>
+                        <div class="image-container">
+                            <img id="originalPreview" alt="原始图片预览">
+                            <div class="watermark-selector" id="watermarkSelector"></div>
+                        </div>
+                    </div>
+
+                    <div class="processed-image">
+                        <h3>处理后</h3>
+                        <div class="image-container">
+                            <img id="processedPreview" alt="处理后预览">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="selectWatermark" class="btn">选择水印区域</button>
+                    <button id="removeWatermark" class="btn">去除水印</button>
+                    <button id="downloadBtn" class="btn">下载处理后的图片</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../scripts/watermark.js"></script>
+</body>
+</html> 
